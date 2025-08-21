@@ -7484,7 +7484,7 @@ header.main-header .header-sticky.active {
 
 .our-platform .post-meta ul li a {
     color: var(--primary-color);
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -7589,7 +7589,7 @@ header.main-header .header-sticky.active {
 /* Responsive for Mobile */
 @media (max-width: 600px) {
     .our-platform .video-section {
-        width: 90%;
+        /* width: 90%; */
         height: auto;
         /* margin-right: 0; */
     }
