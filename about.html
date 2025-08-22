@@ -58,52 +58,209 @@
     <!-- Preloader End -->
 
     <!-- Header Start -->
+   <style>
+        .main-header {
+            position: relative;
+        }
+
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+          
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand img {
+            width: 190px;
+        }
+
+        .right-logo {
+            position: absolute;
+            top: -50px;
+            right: 20px;
+            z-index: 998; /* Reduced z-index to be below navbar toggle */
+            pointer-events: none; /* Prevents interference with navbar toggle */
+        }
+
+        .right-logo img {
+            max-height: 150px;
+            object-fit: contain;
+            width: 150px;
+        }
+
+        .right-logo a {
+            pointer-events: auto; /* Re-enable pointer events only for the link */
+        }
+
+        /* Ensure navbar toggle has higher z-index */
+        .navbar-toggler {
+            z-index: 1001;
+            position: relative;
+        }
+
+        /* Custom responsive menu styles */
+        .responsive-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+background-color: #000000;     
+       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .responsive-menu.active {
+            display: block;
+        }
+
+        .responsive-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .responsive-menu li {
+            border-bottom: 1px solid #575454;
+        }
+
+        .responsive-menu a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #ba2929;
+        }
+
+        .responsive-menu a:hover {
+            background-color: #4b2106;
+        }
+
+        @media (max-width: 991px) {
+            .main-menu {
+                display: none;
+            }
+            
+            .navbar-toggle {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                z-index: 1001;
+                position: relative;
+                top:17px;
+            }
+            
+            .navbar-toggle span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: #821a1a;
+                margin: 5px 0;
+                transition: 0.3s;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .navbar-toggle {
+                display: none;
+            }
+            
+            .responsive-menu {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .right-logo {
+                top: 0px;
+                right: 35px;
+            }
+
+            .right-logo img {
+                max-height: 80px;
+                width: 100px;
+            }
+
+            .navbar-brand img {
+                width: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
     <header class="main-header">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="container d-flex justify-content-between align-items-center w-100">
-
-                    <!-- Left Logo Start -->
                     <a class="navbar-brand" href="index.html">
-                        <img src="images/logoforxnew.png" alt="Logo" style="width: 190px;">
+                        <img src="images/logoforxnew.png" alt="Logo">
                     </a>
-                    <!-- Left Logo End -->
 
-                    <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu" ">
-                        <div class=" nav-menu-wrapper">
-                        <ul class="navbar-nav mr-auto" id="menu">
-                            <li><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="sabcaecosystem.html">Sabka World Ecosystem</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="investorcorner.html">Investor Corner</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                        </ul>
-
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="sabcaecosystem.html">Sabka World Ecosystem</a></li>
+                                <li class="nav-item"><a class="nav-link" href="investorcorner.html">Investor Corner</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- <img src="images/Logo_-_Sabka-01-removebg-preview.png" alt="Sabka Logo" style="width: 150px;"> -->
 
+                    <div class="right-logo">
+                        <a href="https://www.sabkaworld.com/">
+                            <img src="images/Logo - Sabka-01.png" alt="Sabka Logo">
+                        </a>
+                    </div>
+
+                    <!-- Custom navbar toggle button -->
+                    <button class="navbar-toggle" type="button" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <!-- Responsive menu -->
+                    <div class="responsive-menu" id="responsiveMenu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="sabcaecosystem.html">Sabka World Ecosystem</a></li>
+                            <li><a href="investorcorner.html">Investor Corner</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </div>
-
-                <!-- Main Menu End -->
-
-                <!-- Right Logo Start -->
-<div class="right-logo">
-    <a href="https://www.sabkaworld.com/"> <!-- replace with your desired URL -->
-        <img src="images/Logo - Sabka-01.png" alt="Sabka Logo" style="width: 150px;">
-    </a>
-</div>
-                <!-- Right Logo End -->
-
-                <div class="navbar-toggle"></div>
-        </div>
-        </nav>
-        <div class="responsive-menu"></div>
+            </nav>
         </div>
     </header>
 
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('responsiveMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('responsiveMenu');
+            const toggle = document.querySelector('.navbar-toggle');
+            
+            if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Close menu when window is resized to desktop size
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 992) {
+                document.getElementById('responsiveMenu').classList.remove('active');
+            }
+        });
+    </script>
     <!-- Header End -->
 
     <!-- Page Header Start -->
