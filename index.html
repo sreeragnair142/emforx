@@ -53,138 +53,142 @@
 
 
 
-  
-    <style>
-        .main-header {
+
+<style>
+    .main-header {
+        position: relative;
+    }
+
+    .header-sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand img {
+        width: 190px;
+    }
+
+    .right-logo {
+        position: absolute;
+        top: -50px;
+        right: 20px;
+        z-index: 998;
+        /* Reduced z-index to be below navbar toggle */
+        pointer-events: none;
+        /* Prevents interference with navbar toggle */
+    }
+
+    .right-logo img {
+        max-height: 150px;
+        object-fit: contain;
+        width: 150px;
+    }
+
+    .right-logo a {
+        pointer-events: auto;
+        /* Re-enable pointer events only for the link */
+    }
+
+    /* Ensure navbar toggle has higher z-index */
+    .navbar-toggler {
+        z-index: 1001;
+        position: relative;
+    }
+
+    /* Custom responsive menu styles */
+    .responsive-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .responsive-menu.active {
+        display: block;
+    }
+
+    .responsive-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .responsive-menu li {
+        border-bottom: 1px solid #575454;
+    }
+
+    .responsive-menu a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: #ba2929;
+    }
+
+    .responsive-menu a:hover {
+        background-color: #4b2106;
+    }
+
+    @media (max-width: 991px) {
+        .main-menu {
+            display: none;
+        }
+
+        .navbar-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
             position: relative;
+            top: 17px;
         }
 
-        .header-sticky {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-          
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .navbar-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #821a1a;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-toggle {
+            display: none;
         }
 
-        .navbar-brand img {
-            width: 190px;
+        .responsive-menu {
+            display: none !important;
         }
+    }
 
+    @media (max-width: 767px) {
         .right-logo {
-            position: absolute;
-            top: -50px;
-            right: 20px;
-            z-index: 998; /* Reduced z-index to be below navbar toggle */
-            pointer-events: none; /* Prevents interference with navbar toggle */
+            top: 0px;
+            right: 35px;
         }
 
         .right-logo img {
-            max-height: 150px;
-            object-fit: contain;
-            width: 150px;
+            max-height: 80px;
+            width: 100px;
         }
 
-        .right-logo a {
-            pointer-events: auto; /* Re-enable pointer events only for the link */
+        .navbar-brand img {
+            width: 140px;
         }
-
-        /* Ensure navbar toggle has higher z-index */
-        .navbar-toggler {
-            z-index: 1001;
-            position: relative;
-        }
-
-        /* Custom responsive menu styles */
-        .responsive-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-background-color: #000000;     
-       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .responsive-menu.active {
-            display: block;
-        }
-
-        .responsive-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .responsive-menu li {
-            border-bottom: 1px solid #575454;
-        }
-
-        .responsive-menu a {
-            display: block;
-            padding: 15px 20px;
-            text-decoration: none;
-            color: #ba2929;
-        }
-
-        .responsive-menu a:hover {
-            background-color: #4b2106;
-        }
-
-        @media (max-width: 991px) {
-            .main-menu {
-                display: none;
-            }
-            
-            .navbar-toggle {
-                display: block;
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 8px;
-                z-index: 1001;
-                position: relative;
-                top:17px;
-            }
-            
-            .navbar-toggle span {
-                display: block;
-                width: 25px;
-                height: 3px;
-                background: #821a1a;
-                margin: 5px 0;
-                transition: 0.3s;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .navbar-toggle {
-                display: none;
-            }
-            
-            .responsive-menu {
-                display: none !important;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .right-logo {
-                top: 0px;
-                right: 35px;
-            }
-
-            .right-logo img {
-                max-height: 80px;
-                width: 100px;
-            }
-
-            .navbar-brand img {
-                width: 140px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
+
 <body>
     <header class="main-header">
         <div class="header-sticky">
@@ -199,8 +203,10 @@ background-color: #000000;
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li><a class="nav-link" href="index.html">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="sabcaecosystem.html">Sabka World Ecosystem</a></li>
-                                <li class="nav-item"><a class="nav-link" href="investorcorner.html">Investor Corner</a></li>
+                                <li class="nav-item"><a class="nav-link" href="sabcaecosystem.html">Sabka World
+                                        Ecosystem</a></li>
+                                <li class="nav-item"><a class="nav-link" href="investorcorner.html">Investor Corner</a>
+                                </li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
@@ -241,17 +247,17 @@ background-color: #000000;
         }
 
         // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const menu = document.getElementById('responsiveMenu');
             const toggle = document.querySelector('.navbar-toggle');
-            
+
             if (!toggle.contains(event.target) && !menu.contains(event.target)) {
                 menu.classList.remove('active');
             }
         });
 
         // Close menu when window is resized to desktop size
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             if (window.innerWidth >= 992) {
                 document.getElementById('responsiveMenu').classList.remove('active');
             }
@@ -270,6 +276,7 @@ background-color: #000000;
 
     <!-- Hero Section Start -->
     <div class="hero">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
         <div class="video-overlay"></div>
         <div class="container">
             <div class="row align-items-center">
@@ -344,7 +351,7 @@ background-color: #000000;
                                             <div
                                                 class="col-12 col-sm-6 d-flex justify-content-center align-items-center">
                                                 <div class="post-item-btn">
-                                                    <a href="https://www.sabkaworld.com/" class="readmore-btn"
+                                                    <a href="#" class="readmore-btn premium-pro-btn"
                                                         style="color: #35259f;">
                                                         Visit Website
                                                     </a>
@@ -400,6 +407,15 @@ background-color: #000000;
     </div>
     <!-- Hero Section End -->
 
+    <!-- Coming Soon Modal -->
+    <div id="comingSoonModal" class="coming-soon-modal">
+        <div class="coming-soon-content">
+            <h2> Coming Soon!</h2>
+            <p>Our Premium Pro platform is currently under development. Stay tuned for an amazing experience!</p>
+            <button class="close-btn" onclick="closeModal()">Got it!</button>
+        </div>
+    </div>
+
     <!-- CSS -->
     <style>
         .hero {
@@ -430,8 +446,84 @@ background-color: #000000;
             z-index: 2;
             /* ensures content is above overlay */
         }
+
+        /* Coming Soon Modal Styles */
+        .coming-soon-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(31, 30, 30, 0.5);
+        }
+
+        .coming-soon-content {
+            background-color: rgb(37, 37, 37);
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .coming-soon-content h2 {
+            color: #5b5bdd;
+            margin-bottom: 15px;
+        }
+
+        .coming-soon-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            background: #35259f;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: #2a1f7f;
+        }
     </style>
 
+    <script>
+        // Premium Pro button click handler
+        document.querySelector('.premium-pro-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('comingSoonModal').style.display = 'block';
+        });
+
+        // Close modal function
+        function closeModal() {
+            document.getElementById('comingSoonModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('comingSoonModal');
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+    
+   
     <!-- Hero Section End -->
 
 
@@ -592,7 +684,8 @@ background-color: #000000;
                             <div class="section-title section-title-center">
                                 <h3 class="wow fadeInUp">About Us</h3>
                                 <h4 class="text-effect" data-cursor="-opaque"
-                                    style="font-size: 30px; font-weight: 100;">India’s Fastest Growing Recruitment Platform
+                                    style="font-size: 30px; font-weight: 100;">India’s Fastest Growing Recruitment
+                                    Platform
                                 </h4>
                             </div>
                             <!-- Section Title End -->
@@ -700,66 +793,66 @@ background-color: #000000;
             </div>
 
             <section class="welcome-sabka">
-        <div class="container">
+                <div class="container">
 
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="welcome-item wow fadeInUp">
-                        <div class="welcome-content">
-                            <h3>25,000+</h3>
-                            <p>Jobs Posted Daily</p>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="welcome-item wow fadeInUp">
+                                <div class="welcome-content">
+                                    <h3>25,000+</h3>
+                                    <p>Jobs Posted Daily</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="welcome-item wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="welcome-content">
+                                    <h3>5,000+</h3>
+                                    <p>Daily Interviews</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="welcome-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="welcome-content">
+                                    <h3>250,000+</h3>
+                                    <p>Daily Job Applications</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="welcome-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="welcome-content">
+                                    <h3>24,000+</h3>
+                                    <p>Daily In-App Interactions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="welcome-item wow fadeInUp" data-wow-delay="0.8s">
+                                <div class="welcome-content">
+                                    <h3>300+</h3>
+                                    <p>Daily WhatsApp Interactions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="welcome-item wow fadeInUp" data-wow-delay="1s">
+                                <div class="welcome-content">
+                                    <h3>1000+</h3>
+                                    <p>Daily Call Initiations</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="welcome-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="welcome-content">
-                            <h3>5,000+</h3>
-                            <p>Daily Interviews</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="welcome-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="welcome-content">
-                            <h3>250,000+</h3>
-                            <p>Daily Job Applications</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="welcome-item wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="welcome-content">
-                            <h3>24,000+</h3>
-                            <p>Daily In-App Interactions</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="welcome-item wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="welcome-content">
-                            <h3>300+</h3>
-                            <p>Daily WhatsApp Interactions</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="welcome-item wow fadeInUp" data-wow-delay="1s">
-                        <div class="welcome-content">
-                            <h3>1000+</h3>
-                            <p>Daily Call Initiations</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="row">
+                    <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="welcome-features wow fadeInUp" data-wow-delay="1.2s">
                         <ul>
@@ -772,8 +865,8 @@ background-color: #000000;
                     </div>
                 </div>
             </div> -->
-        </div>
-    </section>
+                </div>
+            </section>
             <!-- About Us Section End -->
 
 
@@ -1564,7 +1657,7 @@ background-color: #000000;
                 <div class="col-lg-12">
                     <!-- Footer Copyright Text Start -->
                     <div class="footer-copyright-text">
-                        <p>EMFORX Solutions pvt Ltd All Rights Reserved</p>
+                        <p>EmforX Solutions Pvt Ltd | All Rights Reserved</p>
                     </div>
                     <!-- Footer Copyright Text End -->
                 </div>

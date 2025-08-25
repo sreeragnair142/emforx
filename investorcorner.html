@@ -259,7 +259,7 @@
 <body>
 
     <!-- Header Start -->
-   <style>
+    <style>
         .main-header {
             position: relative;
         }
@@ -268,8 +268,8 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-          
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand img {
@@ -280,8 +280,10 @@
             position: absolute;
             top: -50px;
             right: 20px;
-            z-index: 998; /* Reduced z-index to be below navbar toggle */
-            pointer-events: none; /* Prevents interference with navbar toggle */
+            z-index: 998;
+            /* Reduced z-index to be below navbar toggle */
+            pointer-events: none;
+            /* Prevents interference with navbar toggle */
         }
 
         .right-logo img {
@@ -291,7 +293,8 @@
         }
 
         .right-logo a {
-            pointer-events: auto; /* Re-enable pointer events only for the link */
+            pointer-events: auto;
+            /* Re-enable pointer events only for the link */
         }
 
         /* Ensure navbar toggle has higher z-index */
@@ -307,8 +310,8 @@
             top: 100%;
             left: 0;
             right: 0;
-background-color: #000000;     
-       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: #000000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
 
@@ -341,7 +344,7 @@ background-color: #000000;
             .main-menu {
                 display: none;
             }
-            
+
             .navbar-toggle {
                 display: block;
                 background: none;
@@ -350,9 +353,9 @@ background-color: #000000;
                 padding: 8px;
                 z-index: 1001;
                 position: relative;
-                top:17px;
+                top: 17px;
             }
-            
+
             .navbar-toggle span {
                 display: block;
                 width: 25px;
@@ -367,7 +370,7 @@ background-color: #000000;
             .navbar-toggle {
                 display: none;
             }
-            
+
             .responsive-menu {
                 display: none !important;
             }
@@ -389,558 +392,563 @@ background-color: #000000;
             }
         }
     </style>
-</head>
-<body>
-    <header class="main-header">
-        <div class="header-sticky">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container d-flex justify-content-between align-items-center w-100">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/logoforxnew.png" alt="Logo">
-                    </a>
+    </head>
 
-                    <div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li><a class="nav-link" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="sabcaecosystem.html">Sabka World Ecosystem</a></li>
-                                <li class="nav-item"><a class="nav-link" href="investorcorner.html">Investor Corner</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+    <body>
+        <header class="main-header">
+            <div class="header-sticky">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container d-flex justify-content-between align-items-center w-100">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logoforxnew.png" alt="Logo">
+                        </a>
+
+                        <div class="collapse navbar-collapse main-menu">
+                            <div class="nav-menu-wrapper">
+                                <ul class="navbar-nav mr-auto" id="menu">
+                                    <li><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="sabcaecosystem.html">Sabka World
+                                            Ecosystem</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="investorcorner.html">Investor
+                                            Corner</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="right-logo">
+                            <a href="https://www.sabkaworld.com/">
+                                <img src="images/Logo - Sabka-01.png" alt="Sabka Logo">
+                            </a>
+                        </div>
+
+                        <!-- Custom navbar toggle button -->
+                        <button class="navbar-toggle" type="button" onclick="toggleMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <!-- Responsive menu -->
+                        <div class="responsive-menu" id="responsiveMenu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="sabcaecosystem.html">Sabka World Ecosystem</a></li>
+                                <li><a href="investorcorner.html">Investor Corner</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="right-logo">
-                        <a href="https://www.sabkaworld.com/">
-                            <img src="images/Logo - Sabka-01.png" alt="Sabka Logo">
-                        </a>
-                    </div>
-
-                    <!-- Custom navbar toggle button -->
-                    <button class="navbar-toggle" type="button" onclick="toggleMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                    <!-- Responsive menu -->
-                    <div class="responsive-menu" id="responsiveMenu">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="sabcaecosystem.html">Sabka World Ecosystem</a></li>
-                            <li><a href="investorcorner.html">Investor Corner</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('responsiveMenu');
-            menu.classList.toggle('active');
-        }
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('responsiveMenu');
-            const toggle = document.querySelector('.navbar-toggle');
-            
-            if (!toggle.contains(event.target) && !menu.contains(event.target)) {
-                menu.classList.remove('active');
-            }
-        });
-
-        // Close menu when window is resized to desktop size
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 992) {
-                document.getElementById('responsiveMenu').classList.remove('active');
-            }
-        });
-    </script>
-
-    <!-- Header End -->
-
-    <!-- Page Header Start -->
-    <div class="page-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="wow fadeInUp" data-cursor="-opaque">Investor <span>Corner</span></h1>
-                        <nav class="wow fadeInUp" data-wow-delay="0.2s">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index-2.html">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Investor Corner</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <!-- Page Header Box End -->
-                </div>
+                </nav>
             </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
+        </header>
 
-    <!-- Why Invest in Sabka Section Start -->
-    <div class="why-invest-section">
-        <div class="container">
-            <div class="why-invest-content">
-                <!-- Investment Hero Start -->
-                <div class="investment-hero wow fadeInUp">
-                    <!-- <p class="investment-tagline">Now, it's your turn</p> -->
-                    <h2>Why Investing in Sabka?</h2>
-                    <!-- <p>Your Participation Means Partnership in Something Truly Meaningful</p> -->
-                </div>
-                <!-- Investment Hero End -->
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('responsiveMenu');
+                menu.classList.toggle('active');
+            }
 
-                <!-- Investment Grid Start -->
-                <div class="investment-grid">
-                    <!-- Investment Points Start -->
-                    <div class="investment-points wow fadeInLeft" data-wow-delay="0.2s">
-                        <h3>Be Part of The Growth Story : Invest in India’s First and Fastest Growing Quick
-                            Recruitment Platform</h3>
-                        <ul class="investment-list">
-                            <li>Founder With Proven Industry Expertise</li>
-                            <li>Proven Market Acceptance</li>
-                            <li>Multiple Revenue Channels & Income Models</li>
-                            <li>Technology-Powered, Globally Scalable Platforms</li>
-                            <li>Premium Office Infrastructure & Execution-Ready Teams</li>
-                            <li>Media Recognition and Public Credibility</li>
-                            <li>Strong Social Foundation & Trust-Driven Branding</li>
-                        </ul>
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const menu = document.getElementById('responsiveMenu');
+                const toggle = document.querySelector('.navbar-toggle');
 
-                    </div>
-                    <!-- Investment Points End -->
+                if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                    menu.classList.remove('active');
+                }
+            });
 
-                    <!-- Investment Vision Start -->
+            // Close menu when window is resized to desktop size
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 992) {
+                    document.getElementById('responsiveMenu').classList.remove('active');
+                }
+            });
+        </script>
+
+        <!-- Header End -->
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row align-items-center">
                     <div class="col-lg-12">
-                        <div class="wow scaleIn">
-                            <img src="images/c1.webp" class="w-100 rotate-animation" alt="">
+                        <!-- Page Header Box Start -->
+                        <div class="page-header-box">
+                            <h1 class="wow fadeInUp" data-cursor="-opaque">Investor <span>Corner</span></h1>
+                            <nav class="wow fadeInUp" data-wow-delay="0.2s">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index-2.html">home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Investor Corner</li>
+                                </ol>
+                            </nav>
                         </div>
+                        <!-- Page Header Box End -->
                     </div>
-                    <!-- Investment Vision End -->
                 </div>
-                <!-- Investment Grid End -->
             </div>
         </div>
-    </div>
-    <!-- Why Invest in Sabka Section End -->
+        <!-- Page Header End -->
 
-    <!-- How It Work Section Start -->
-    <div class="how-it-work" style="padding-left: 380px; text-align: center;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <!-- How Work Content Start -->
-                    <div class="how-work-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">sabka</h3>
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Revenue & Investments
-                                <span>At Present</span>
-                            </h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- How Work Steps Start -->
-                        <div class="how-work-steps">
-                            <!-- How Work Item Start -->
-                            <div class="how-work-item wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="how-work-header">
-                                    <div class="icon-box">
-                                        <img src="images/icon-how-work-step-1.svg" alt="">
-                                    </div>
-                                </div>
-                                <div class="how-work-item-content">
-                                    <h3>Revenue Mode </h3>
-                                    <p>Not Initiated.</p>
-                                </div>
-                            </div>
-                            <!-- How Work Item End -->
-
-                            <!-- How Work Item Start -->
-                            <div class="how-work-item wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="how-work-header">
-                                    <div class="icon-box">
-                                        <img src="images/icon-how-work-step-2.svg" alt="">
-                                    </div>
-                                </div>
-                                <div class="how-work-item-content">
-                                    <h3>Mode of Operation</h3>
-                                    <p>Bootstraped</p>
-                                </div>
-                            </div>
-                            <!-- How Work Item End -->
-
-                            <!-- How Work Item Start -->
-                            <div class="how-work-item wow fadeInUp" data-wow-delay="0.8s">
-                                <div class="how-work-header">
-                                    <div class="icon-box">
-                                        <img src="images/icon-how-work-step-3.svg" alt="">
-                                    </div>
-                                </div>
-                                <div class="how-work-item-content">
-                                    <h3>Closed Invetments</h3>
-                                    <p>Preseed Round 1</p>
-                                </div>
-                            </div>
-                            <!-- How Work Item End -->
-
-                            <!-- How Work Item Start -->
-                            <div class="how-work-item wow fadeInUp" data-wow-delay="1s">
-                                <div class="how-work-header">
-                                    <div class="icon-box">
-                                        <img src="images/icon-how-work-step-4.svg" alt="">
-                                    </div>
-                                </div>
-                                <div class="how-work-item-content">
-                                    <h3>Prseed Investment Type</h3>
-                                    <p>Equity Funding .</p>
-                                </div>
-                            </div>
-                            <!-- How Work Item End -->
-                        </div>
-                        <!-- How Work Steps End -->
+        <!-- Why Invest in Sabka Section Start -->
+        <div class="why-invest-section">
+            <div class="container">
+                <div class="why-invest-content">
+                    <!-- Investment Hero Start -->
+                    <div class="investment-hero wow fadeInUp">
+                        <!-- <p class="investment-tagline">Now, it's your turn</p> -->
+                        <h2>Why Investing in Sabka?</h2>
+                        <!-- <p>Your Participation Means Partnership in Something Truly Meaningful</p> -->
                     </div>
-                    <!-- How Work Content End -->
-                </div>
+                    <!-- Investment Hero End -->
 
-                <div class="col-lg-6">
-                    <!-- How Work Video Content Start -->
-                    <div class="how-work-video-content">
-                        <!-- How Work Video Start -->
-                        <!-- <div class="col-lg-12">
+                    <!-- Investment Grid Start -->
+                    <div class="investment-grid">
+                        <!-- Investment Points Start -->
+                        <div class="investment-points wow fadeInLeft" data-wow-delay="0.2s">
+                            <h3>Be Part of The Growth Story : Invest in India’s First and Fastest Growing Quick
+                                Recruitment Platform</h3>
+                            <ul class="investment-list">
+                                <li>Founder With Proven Industry Expertise</li>
+                                <li>Proven Market Acceptance</li>
+                                <li>Multiple Revenue Channels & Income Models</li>
+                                <li>Technology-Powered, Globally Scalable Platforms</li>
+                                <li>Premium Office Infrastructure & Execution-Ready Teams</li>
+                                <li>Media Recognition and Public Credibility</li>
+                                <li>Strong Social Foundation & Trust-Driven Branding</li>
+                            </ul>
+
+                        </div>
+                        <!-- Investment Points End -->
+
+                        <!-- Investment Vision Start -->
+                        <div class="col-lg-12">
+                            <div class="wow scaleIn">
+                                <img src="images/c1.webp" class="w-100 rotate-animation" alt="">
+                            </div>
+                        </div>
+                        <!-- Investment Vision End -->
+                    </div>
+                    <!-- Investment Grid End -->
+                </div>
+            </div>
+        </div>
+        <!-- Why Invest in Sabka Section End -->
+
+        <!-- How It Work Section Start -->
+        <div class="how-it-work" style="padding-left: 380px; text-align: center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- How Work Content Start -->
+                        <div class="how-work-content">
+                            <!-- Section Title Start -->
+                            <div class="section-title">
+                                <h3 class="wow fadeInUp">sabka</h3>
+                                <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Revenue &
+                                    Investments
+                                    <span>At Present</span>
+                                </h2>
+                            </div>
+                            <!-- Section Title End -->
+
+                            <!-- How Work Steps Start -->
+                            <div class="how-work-steps">
+                                <!-- How Work Item Start -->
+                                <div class="how-work-item wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="how-work-header">
+                                        <div class="icon-box">
+                                            <img src="images/icon-how-work-step-1.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="how-work-item-content">
+                                        <h3>Revenue Mode </h3>
+                                        <p>Subscriptions, Paid Visual Optimisatiions,Premium Recruitment Packages,
+                                            Training,Classes and Courses</p>
+                                    </div>
+                                </div>
+                                <!-- How Work Item End -->
+
+                                <!-- How Work Item Start -->
+                                <div class="how-work-item wow fadeInUp" data-wow-delay="0.6s">
+                                    <div class="how-work-header">
+                                        <div class="icon-box">
+                                            <img src="images/icon-how-work-step-2.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="how-work-item-content">
+                                        <h3>Mode of Operation</h3>
+                                        <p>Pre - Sees Funded</p>
+                                    </div>
+                                </div>
+                                <!-- How Work Item End -->
+
+                                <!-- How Work Item Start -->
+                                <div class="how-work-item wow fadeInUp" data-wow-delay="0.8s">
+                                    <div class="how-work-header">
+                                        <div class="icon-box">
+                                            <img src="images/icon-how-work-step-3.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="how-work-item-content">
+                                        <h3>Closed Invetments</h3>
+                                        <p>Preseed Round 1</p>
+                                    </div>
+                                </div>
+                                <!-- How Work Item End -->
+
+                                <!-- How Work Item Start -->
+                                <div class="how-work-item wow fadeInUp" data-wow-delay="1s">
+                                    <div class="how-work-header">
+                                        <div class="icon-box">
+                                            <img src="images/icon-how-work-step-4.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="how-work-item-content">
+                                        <h3>Prseed Investment Type</h3>
+                                        <p>Equity Funding .</p>
+                                    </div>
+                                </div>
+                                <!-- How Work Item End -->
+                            </div>
+                            <!-- How Work Steps End -->
+                        </div>
+                        <!-- How Work Content End -->
+                    </div>
+
+                    <div class="col-lg-6">
+                        <!-- How Work Video Content Start -->
+                        <div class="how-work-video-content">
+                            <!-- How Work Video Start -->
+                            <!-- <div class="col-lg-12">
                             <div class="wow scaleIn">
                                 <img src="images/c1.webp" class="w-100 rotate-animation" alt="">
                             </div>
                         </div> -->
-                        <!-- How Work Video Start -->
+                            <!-- How Work Video Start -->
 
-                        <!-- Section Footer Text Start -->
-                        <!-- <div class="section-footer-text wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Section Footer Text Start -->
+                            <!-- <div class="section-footer-text wow fadeInUp" data-wow-delay="0.2s">
                             <p>We help businesses design, build, and deploy intelligent solutions that drive real
                                 results. <a href="contact.html">Contact Now</a></p>
                         </div> -->
-                        <!-- Section Footer Text End -->
+                            <!-- Section Footer Text End -->
+                        </div>
+                        <!-- How Work Video Content End -->
                     </div>
-                    <!-- How Work Video Content End -->
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- How It Work Section End -->
+        <!-- How It Work Section End -->
 
-    <!-- Contact Form Container Start -->
-    <div class="contact-form-container" style="padding: 20px;">
-        <div class="contact-form" style="max-width: 700px; margin: 0 auto;">
-            <!-- Section Title Start -->
-            <div class="section-title">
-                <h2 class="wow fadeInUp" data-cursor="-opaque">Investor Request Form</h2>
-            </div>
-            <!-- Section Title End -->
-
-            <!-- Contact Form Start -->
-            <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp"
-                data-wow-delay="0.2s">
-                <div class="row">
-                    <!-- Name -->
-                    <div class="form-group col-md-6 mb-4">
-                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="form-group col-md-6 mb-4">
-                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                    </div>
-
-                    <!-- Mobile -->
-                    <div class="form-group col-md-6 mb-4">
-                        <input type="text" name="mob" class="form-control" placeholder="Mobile Number" required>
-                    </div>
-
-                    <!-- Country -->
-                    <div class="form-group col-md-6 mb-4">
-                        <div class="select-wrapper" style="position: relative;">
-                            <select name="country" class="form-control" required
-                                style="appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 40px;">
-                                <option value="">Select Country</option>
-                                <option value="India">India</option>
-                                <option value="United States">United States</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Germany">Germany</option>
-                                <option value="France">France</option>
-                                <option value="Japan">Japan</option>
-                                <option value="China">China</option>
-                                <option value="Singapore">Singapore</option>
-                            </select>
-                            <span
-                                style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666;">
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-                                    <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- State -->
-                    <div class="form-group col-md-6 mb-4">
-                        <input type="text" name="state" class="form-control" placeholder="State" required>
-                    </div>
-
-                    <!-- City -->
-                    <div class="form-group col-md-6 mb-4">
-                        <input type="text" name="city" class="form-control" placeholder="City" required>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="form-group col-md-12 mb-5">
-                        <textarea name="message" class="form-control" rows="4" placeholder="Your Message"
-                            required></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="col-lg-12">
-                        <div class="contact-form-btn text-center">
-                            <button type="submit" class="btn-default" style="width: 160px; padding: 15px 20px;">
-                                <span>Submit</span>
-                            </button>
-                            <div id="msgSubmit" class="h3 hidden"></div>
-                        </div>
-                    </div>
+        <!-- Contact Form Container Start -->
+        <div class="contact-form-container" style="padding: 20px;">
+            <div class="contact-form" style="max-width: 700px; margin: 0 auto;">
+                <!-- Section Title Start -->
+                <div class="section-title">
+                    <h2 class="wow fadeInUp" data-cursor="-opaque">Investor Request Form</h2>
                 </div>
-            </form>
-            <!-- Contact Form End -->
-        </div>
-    </div>
+                <!-- Section Title End -->
 
-    <!-- Contact Form Container End -->
-
-    <!-- Footer Start -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-7">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h2 class="wow fadeInUp" data-cursor="-opaque">Let's start work <span>together!</span>
-                        </h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Looking for a new opportunity? Join us and
-                            take
-                            the next step in your career journey.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-                <div class="col-lg-5">
-                    <!-- Section Button Start -->
-                    <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="contact.html" class="btn-default">Let's Work Together</a>
-                    </div>
-                    <!-- Section Button End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <!-- About Footer Start -->
-                    <div class="about-footer">
-                        <!-- Footer Logo Start -->
-                        <div class="footer-logo">
-                            <img src="images/logoforxnew1.png" alt="">
+                <!-- Contact Form Start -->
+                <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp"
+                    data-wow-delay="0.2s">
+                    <div class="row">
+                        <!-- Name -->
+                        <div class="form-group col-md-6 mb-4">
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
                         </div>
-                        <!-- Footer Logo End -->
 
-                        <!-- Social Media Icons Start -->
-                        <div class="footer-social">
-                            <h3>Follow Us</h3>
-                            <div class="social-links">
-                                <a href="#" class="social-link facebook" aria-label="Facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="social-link x-twitter" aria-label="X (formerly Twitter)">
-                                    <i class="fab fa-x-twitter"></i>
-                                </a>
-                                <a href="#" class="social-link instagram" aria-label="Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="social-link linkedin" aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="social-link youtube" aria-label="YouTube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
+                        <!-- Email -->
+                        <div class="form-group col-md-6 mb-4">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+
+                        <!-- Mobile -->
+                        <div class="form-group col-md-6 mb-4">
+                            <input type="text" name="mob" class="form-control" placeholder="Mobile Number" required>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="form-group col-md-6 mb-4">
+                            <div class="select-wrapper" style="position: relative;">
+                                <select name="country" class="form-control" required
+                                    style="appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 40px;">
+                                    <option value="">Select Country</option>
+                                    <option value="India">India</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="France">France</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="China">China</option>
+                                    <option value="Singapore">Singapore</option>
+                                </select>
+                                <span
+                                    style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666;">
+                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
                             </div>
                         </div>
-                        <!-- Social Media Icons End -->
-                    </div>
-                    <!-- About Footer End -->
-                </div>
 
-                <div class="col-lg-5 col-md-8">
-                    <div class="footer-contact-box">
-                        <!-- Footer Links Start -->
-                        <div class="footer-links">
-                            <h3>Get In Touch</h3>
-                            <p><a href="tel:152885253">+(00) - 152 885 253</a></p>
-                            <p><a href="mailto:info@domainname.com">info@domainname.com</a></p>
+                        <!-- State -->
+                        <div class="form-group col-md-6 mb-4">
+                            <input type="text" name="state" class="form-control" placeholder="State" required>
                         </div>
-                        <!-- Footer Links End -->
 
-                        <!-- Footer Links Start -->
-                        <div class="footer-links">
-                            <h3>Our Location</h3>
-                            <p>123 Lorem Street Suite 5B, Ips Park London, UK SW1A 1AA</p>
+                        <!-- City -->
+                        <div class="form-group col-md-6 mb-4">
+                            <input type="text" name="city" class="form-control" placeholder="City" required>
                         </div>
-                        <!-- Footer Links End -->
-                    </div>
-                </div>
 
-                <div class="col-lg-4">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links footer-privacy-policy">
-                        <h3>Subscribe Newsletter's</h3>
-                        <!-- Footer Newsletter Form Start -->
-                        <div class="footer-newsletter-form">
-                            <form id="newslettersForm" action="#" method="POST">
-                                <div class="form-group">
-                                    <input type="email" name="mail" class="form-control" id="mail"
-                                        placeholder="Enter your email" required>
-                                    <button type="submit" class="newsletter-btn">subscribe<i
-                                            class="fa-regular fa-paper-plane"></i></button>
-                                </div>
-                            </form>
+                        <!-- Message -->
+                        <div class="form-group col-md-12 mb-5">
+                            <textarea name="message" class="form-control" rows="4" placeholder="Your Message"
+                                required></textarea>
                         </div>
-                        <!-- Footer Newsletter Form End -->
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
 
-                <div class="col-lg-12">
-                    <!-- Footer Copyright Text Start -->
-                    <div class="footer-copyright-text">
-                        <p>EMFORX Solutions pvt Ltd All Rights Reserved</p>
+                        <!-- Submit Button -->
+                        <div class="col-lg-12">
+                            <div class="contact-form-btn text-center">
+                                <button type="submit" class="btn-default" style="width: 160px; padding: 15px 20px;">
+                                    <span>Submit</span>
+                                </button>
+                                <div id="msgSubmit" class="h3 hidden"></div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Footer Copyright Text End -->
-                </div>
+                </form>
+                <!-- Contact Form End -->
             </div>
         </div>
-    </footer>
 
-    <style>
-        /* Social Media Icons Styling */
-        .footer-social {
-            margin-top: 20px;
-        }
+        <!-- Contact Form Container End -->
 
-        .footer-social h3 {
-            color: #73328b;
-            font-size: 18px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
+        <!-- Footer Start -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row section-row align-items-center">
+                    <div class="col-lg-7">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h2 class="wow fadeInUp" data-cursor="-opaque">Let's start work <span>together!</span>
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Looking for a new opportunity? Join us and
+                                take
+                                the next step in your career journey.</p>
+                        </div>
+                        <!-- Section Title End -->
+                    </div>
 
-        .social-links {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+                    <div class="col-lg-5">
+                        <!-- Section Button Start -->
+                        <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="contact.html" class="btn-default">Let's Work Together</a>
+                        </div>
+                        <!-- Section Button End -->
+                    </div>
+                </div>
 
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #bb3f3f 0%, #764ba2 100%);
-            border-radius: 50%;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
+                <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                        <!-- About Footer Start -->
+                        <div class="about-footer">
+                            <!-- Footer Logo Start -->
+                            <div class="footer-logo">
+                                <img src="images/logoforxnew1.png" alt="">
+                            </div>
+                            <!-- Footer Logo End -->
 
-        .social-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-            color: #fff;
-        }
+                            <!-- Social Media Icons Start -->
+                            <div class="footer-social">
+                                <h3>Follow Us</h3>
+                                <div class="social-links">
+                                    <a href="#" class="social-link facebook" aria-label="Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="social-link x-twitter" aria-label="X (formerly Twitter)">
+                                        <i class="fab fa-x-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-link instagram" aria-label="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="social-link youtube" aria-label="YouTube">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Social Media Icons End -->
+                        </div>
+                        <!-- About Footer End -->
+                    </div>
 
-        .social-link.facebook:hover {
-            background: linear-gradient(135deg, #3b5998, #4c70ba);
-        }
+                    <div class="col-lg-5 col-md-8">
+                        <div class="footer-contact-box">
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>Get In Touch</h3>
+                                <p><a href="tel:152885253">+(00) - 152 885 253</a></p>
+                                <p><a href="mailto:info@domainname.com">info@domainname.com</a></p>
+                            </div>
+                            <!-- Footer Links End -->
 
-        .social-link.x-twitter:hover {
-            background: linear-gradient(135deg, #000000, #1a1a1a);
-        }
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>Our Location</h3>
+                                <p>123 Lorem Street Suite 5B, Ips Park London, UK SW1A 1AA</p>
+                            </div>
+                            <!-- Footer Links End -->
+                        </div>
+                    </div>
 
-        .social-link.instagram:hover {
-            background: linear-gradient(135deg, #e4405f, #fd5949, #fccc63);
-        }
+                    <div class="col-lg-4">
+                        <!-- Footer Links Start -->
+                        <div class="footer-links footer-privacy-policy">
+                            <h3>Subscribe Newsletter's</h3>
+                            <!-- Footer Newsletter Form Start -->
+                            <div class="footer-newsletter-form">
+                                <form id="newslettersForm" action="#" method="POST">
+                                    <div class="form-group">
+                                        <input type="email" name="mail" class="form-control" id="mail"
+                                            placeholder="Enter your email" required>
+                                        <button type="submit" class="newsletter-btn">subscribe<i
+                                                class="fa-regular fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Footer Newsletter Form End -->
+                        </div>
+                        <!-- Footer Links End -->
+                    </div>
 
-        .social-link.linkedin:hover {
-            background: linear-gradient(135deg, #0077b5, #0099d4);
-        }
+                    <div class="col-lg-12">
+                        <!-- Footer Copyright Text Start -->
+                        <div class="footer-copyright-text">
+                            <p>EmforX Solutions Pvt Ltd | All Rights Reserved</p>
+                        </div>
+                        <!-- Footer Copyright Text End -->
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-        .social-link.youtube:hover {
-            background: linear-gradient(135deg, #ff0000, #cc0000);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .social-links {
-                justify-content: center;
-            }
-
+        <style>
+            /* Social Media Icons Styling */
             .footer-social {
-                text-align: center;
-                margin-top: 30px;
+                margin-top: 20px;
             }
-        }
-    </style>
 
-    <!-- Footer End -->
+            .footer-social h3 {
+                color: #73328b;
+                font-size: 18px;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
 
-    <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap js file -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
-    <script src="js/validator.min.js"></script>
-    <!-- SlickNav js file -->
-    <script src="js/jquery.slicknav.js"></script>
-    <!-- Swiper js file -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- Counter js file -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <!-- Magnific js file -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- Parallax js -->
-    <script src="js/parallaxie.js"></script>
-    <!-- MagicCursor js file -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
-    <!-- Text Effect js file -->
-    <script src="js/SplitText.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <!-- SmoothScroll -->
-    <script src="js/SmoothScroll.js"></script>
-    <!-- YTPlayer js File -->
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
-    <!-- Wow js file -->
-    <script src="js/wow.min.js"></script>
-    <!-- Main Custom js file -->
-    <script src="js/function.js"></script>
-</body>
+            .social-links {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            .social-link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(135deg, #bb3f3f 0%, #764ba2 100%);
+                border-radius: 50%;
+                color: #fff;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                font-size: 18px;
+            }
+
+            .social-link:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+                color: #fff;
+            }
+
+            .social-link.facebook:hover {
+                background: linear-gradient(135deg, #3b5998, #4c70ba);
+            }
+
+            .social-link.x-twitter:hover {
+                background: linear-gradient(135deg, #000000, #1a1a1a);
+            }
+
+            .social-link.instagram:hover {
+                background: linear-gradient(135deg, #e4405f, #fd5949, #fccc63);
+            }
+
+            .social-link.linkedin:hover {
+                background: linear-gradient(135deg, #0077b5, #0099d4);
+            }
+
+            .social-link.youtube:hover {
+                background: linear-gradient(135deg, #ff0000, #cc0000);
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .social-links {
+                    justify-content: center;
+                }
+
+                .footer-social {
+                    text-align: center;
+                    margin-top: 30px;
+                }
+            }
+        </style>
+
+        <!-- Footer End -->
+
+        <!-- Jquery Library File -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <!-- Bootstrap js file -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Validator js file -->
+        <script src="js/validator.min.js"></script>
+        <!-- SlickNav js file -->
+        <script src="js/jquery.slicknav.js"></script>
+        <!-- Swiper js file -->
+        <script src="js/swiper-bundle.min.js"></script>
+        <!-- Counter js file -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <!-- Magnific js file -->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <!-- Parallax js -->
+        <script src="js/parallaxie.js"></script>
+        <!-- MagicCursor js file -->
+        <script src="js/gsap.min.js"></script>
+        <script src="js/magiccursor.js"></script>
+        <!-- Text Effect js file -->
+        <script src="js/SplitText.js"></script>
+        <script src="js/ScrollTrigger.min.js"></script>
+        <!-- SmoothScroll -->
+        <script src="js/SmoothScroll.js"></script>
+        <!-- YTPlayer js File -->
+        <script src="js/jquery.mb.YTPlayer.min.js"></script>
+        <!-- Wow js file -->
+        <script src="js/wow.min.js"></script>
+        <!-- Main Custom js file -->
+        <script src="js/function.js"></script>
+    </body>
 
 </html>
