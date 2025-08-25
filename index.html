@@ -192,7 +192,7 @@
                                             <div
                                                 class="col-12 col-sm-6 d-flex justify-content-center align-items-center">
                                                 <div class="post-item-btn">
-                                                    <a href="#" class="readmore-btn premium-pro-btn"
+                                                    <a href="./404.html" class="readmore-btn premium-pro-btn"
                                                         style="color: #35259f;">
                                                         Visit Website
                                                     </a>
@@ -249,13 +249,13 @@
     <!-- Hero Section End -->
 
     <!-- Coming Soon Modal -->
-    <div id="comingSoonModal" class="coming-soon-modal">
+    <!-- <div id="comingSoonModal" class="coming-soon-modal">
         <div class="coming-soon-content">
             <h2> Coming Soon!</h2>
             <p>Our Premium Pro platform is currently under development. Stay tuned for an amazing experience!</p>
             <button class="close-btn" onclick="closeModal()">Got it!</button>
         </div>
-    </div>
+    </div> -->
 
     <!-- CSS -->
   
@@ -1477,33 +1477,6 @@
 
 
 
-    <script>
-        // Premium Pro button click handler
-        document.querySelector('.premium-pro-btn').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('comingSoonModal').style.display = 'block';
-        });
-
-        // Close modal function
-        function closeModal() {
-            document.getElementById('comingSoonModal').style.display = 'none';
-        }
-
-        // Close modal when clicking outside of it
-        window.addEventListener('click', function(e) {
-            const modal = document.getElementById('comingSoonModal');
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-    </script>
 
      <script>
         function toggleMenu() {

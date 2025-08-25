@@ -4381,9 +4381,9 @@ header.main-header .header-sticky.active {
 /***    31. 404 Error Page css    ***/
 /************************************/
 
-.error-page {
+/* .error-page {
   padding: 80px 0 160px;
-}
+} */
 
 .error-page-image {
   text-align: center;
